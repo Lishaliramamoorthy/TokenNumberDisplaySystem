@@ -23,6 +23,7 @@ To develop a single sided PCB board for a single digit token number display syst
 
 ## SCHEMATIC
 
+![Uploading EXP 3.jpg…]()
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -140,7 +141,7 @@ int main(void)
 ```
 ## PCB LAYOUT
 
-
+![WhatsApp Image 2023-04-27 at 12 07 56](https://user-images.githubusercontent.com/75235090/235055434-4898a67d-824b-4735-a6d8-f8f20492d4bd.jpeg)
 
 ## TOP LAYER
 
