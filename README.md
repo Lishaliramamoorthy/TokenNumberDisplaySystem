@@ -1,31 +1,33 @@
 # STM32 Based Token Number Display System
 
-### AIM:
+## AIM
 To develop a single sided PCB board for a single digit token number display system with buzzer.
 
-### Requirement:
+## REQUIREMENT
 
-    proteus software
-    STM 32ide software
+ Proteus software
+ 
+ CUBE IDE software
 
-### Procedure:
-Step 1: open proteus software and draw the schematic diagram.
+## STEPS
 
-Step 2: open pcb layout and convert it to 3d view.
+ STEP 1: Open proteus software and draw the schematic diagram.
+ 
+ STEP 2: Open PCB layout and convert it to 3D view.
+ 
+ STEP 3: Open IDE software configure the I/O pins.
+ 
+ STEP 4: Write the code for seven segment display and buzzer.
+ 
+ STEP 5: Upload the elf file and run.
 
-Step 3: open ide software configure the I/O pins.
-
-Step 4: write the code for seven segment display and buzzer.
-
-Step 5: uplode the elf file and run.
+## SCHEMATIC
 
 
-### Schematic:
 
-
-### Code:
-```
-~~~
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+## CODE
+```python3
 void display(int n)
 {
 		int x[11][8]={{0,0,1,1,1,1,1,1},{0,0,0,0,0,1,1,0},{0,1,0,1,1,0,1,1},{1,1,0,0,1,1,1,1},{0,1,1,0,0,1,1,0},{0,1,1,0,1,1,0,1},{0,1,1,1,1,1,0,1},{0,0,0,0,0,1,1,1},{0,1,1,1,1,1,1,1},{0,1,1,0,0,1,1,1}};
@@ -37,34 +39,34 @@ void display(int n)
 				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
 
 			if(x[n][1]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
 			else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
 
 			if(x[n][2]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
 			if(x[n][3]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
 			if(x[n][4]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
 			if(x[n][5]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 			if(x[n][6]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
 			if(x[n][7]==1)
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-						else
-							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+			else
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
 
 		}
 		else
@@ -77,7 +79,6 @@ void display(int n)
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
-
 		}
 
 }
@@ -130,31 +131,30 @@ int main(void)
 
 	  }
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-	  		  HAL_Delay(3000);
-	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
-~~~
 ```
-### PCB Layout:
-![WhatsApp Image 2023-04-27 at 12 07 56](https://user-images.githubusercontent.com/75235090/235055434-4898a67d-824b-4735-a6d8-f8f20492d4bd.jpeg)
-
-
-#### TopLayer:
-
-![WhatsApp Image 2023-04-27 at 12 02 00](https://user-images.githubusercontent.com/75235090/235056915-8563e95e-ceae-4b10-9e40-fb2978a7f67d.jpeg)
+## PCB LAYOUT
 
 
 
-#### BottomLayer:
-![WhatsApp Image 2023-04-27 at 12 02 00 (1)](https://user-images.githubusercontent.com/75235090/235055510-e3615b87-0168-428e-9c5e-6f1e9a52d4d6.jpeg)
+## TOP LAYER
 
+![Screenshot 2023-04-24 110824](https://user-images.githubusercontent.com/65499285/233920231-ee96c0ea-20cb-4e57-90e3-9312bd1cdae3.png)
 
-### 3D View:
-![WhatsApp Image 2023-04-27 at 12 01 59](https://user-images.githubusercontent.com/75235090/235057005-97be4a44-b9e5-4fb8-a083-e3da6136e4ab.jpeg)
+## BOTTOM LAYER
 
+![image](https://user-images.githubusercontent.com/65499285/235099368-1df410ce-d866-4d57-a4da-d4afe1463bb5.png)
 
-### Result:
-Thus the simulation of token number display with buzzer is executed succesfully.
+## 3D VIEW
+
+![image](https://user-images.githubusercontent.com/65499285/235099324-ffc8dd62-0957-4f60-9a1b-3a9a9e795e19.png)
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+## RESULT
+Thus, the simulation of token number display with buzzer is executed successfully.
