@@ -23,7 +23,8 @@ To develop a single sided PCB board for a single digit token number display syst
 
 ## SCHEMATIC
 
-![Uploading EXP 3.jpg…]()
+![EXP 3](https://github.com/Lishaliramamoorthy/TokenNumberDisplaySystem/assets/75237886/6358b260-d5ca-46b2-8347-ed6c5a94665e)
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
